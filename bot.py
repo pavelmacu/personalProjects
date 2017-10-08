@@ -8,7 +8,6 @@ from telegram.ext import Updater, MessageHandler, Filters, CommandHandler, Inlin
 from telegram import InlineQueryResultArticle, InputTextMessageContent
 
 from random import getrandbits
-
 # Método que imprimirá por pantalla la información que reciba
 def listener(bot, update):
     id = update.message.chat_id
@@ -91,7 +90,7 @@ def inline(bot, update):
 def main():
     # Creamos el Updater, objeto que se encargará de mandarnos las peticiones del bot
     # Por supuesto no os olvidéis de cambiar donde pone "TOKEN" por el token que os ha dado BotFather
-    updater = Updater("326378948:AAGhppZREhi2ZFfxFTxREWRjFpxQ2UFMdew")
+    updater = Updater(TOKEN)
 
     # Cogemos el Dispatcher, en el cual registraremos los comandos del bot y su funcionalidad
     dispatcher = updater.dispatcher
@@ -116,4 +115,9 @@ def main():
 
 # Llamamos al método main para ejecutar lo anterior
 if __name__ == '__main__':
-    main()
+    TOKEN=sys.argv[1]
+    if TOKEN :
+        print "inicio bot"
+        main()
+    else:
+        print "Error no puedes entrar"

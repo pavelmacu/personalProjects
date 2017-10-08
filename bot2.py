@@ -57,7 +57,8 @@ def handle(msg):
                 else:
                     bot.sendMessage(chat_id, "Lo siento, no reconozco ese comando!")
 
-bot = telepot.Bot('326378948:AAGhppZREhi2ZFfxFTxREWRjFpxQ2UFMdew')
+TOKEN=sys.argv[1]
+bot = telepot.Bot(TOKEN)
 
 bot.message_loop(handle)
 
