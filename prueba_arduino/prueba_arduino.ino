@@ -15,6 +15,6 @@ void loop() {
         else if (dato=='H'){
           Serial.println("espponse");
         }
-        else{}
+        else{Serial.println("error")}
       }
 }
